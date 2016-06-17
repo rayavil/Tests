@@ -16,7 +16,7 @@
       <div class="row">
         <div class="col-md-3 col-md-offset-4" >
 	        <div class="panel panel-default">
-            	<div class="panel-heading">Ingresar</div>
+            	<div class="panel-heading">Bienvenido al Sistema Tests!</div>
                 <div class="panel-body">
 	                <?php
 		                if (isset($_GET['error'])) {
