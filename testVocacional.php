@@ -50,6 +50,7 @@
 
 								$i=1;
 								foreach ($testVocacional as $testVo) {
+                                    echo '<div class="well well">';
 									echo "<div class='row text-left'>";
 										echo "<div class='col-md-12'>";
 											echo "<label>$i".". ".$testVo['pregunta']."</label>";
@@ -63,7 +64,7 @@
 											echo "<input type='radio' name='respuesta$i' id='respuesta$i' value='0'> No me interesa</input>";
 										echo "</div>";
 									echo "</div>";
-									echo "<br>";
+									echo "</div>";
 									$i++;
 								}
 							?>
