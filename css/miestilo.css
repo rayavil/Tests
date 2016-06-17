@@ -1,0 +1,49 @@
+.rojo{
+	color: #FF0000;
+}
+
+.blanco{
+	background-color: #FFFFFF;
+}
+
+.margen{
+	margin-top: 50px;
+}
+
+.margen2{
+	margin-top: 10px;
+}
+
+.margenTabla{
+	margin-top: 5px;
+}
+
+.margenBuscar{
+	margin: 30;
+}
+
+.margen-foot{
+	margin-bottom: 10px;
+}
+
+body{
+	background:#F2F2F2;
+}
+
+.cuadro{
+	background: #2E9AFE;
+	color: #FFFFFF;
+}
+
+.colorCelda{
+	background: #04B404;
+}
+
+.colorResultado{
+	background: #0101DF;
+}
+
+.colorColumna{
+	text-align: right;
+	font-weight: bold;
+}

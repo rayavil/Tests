@@ -1,0 +1,13 @@
+Verificar si es alumno o no
+SI es alumno solicitar NoC
+si no asignar un ID
+--------------------------------------------
+Fecha de Nacimiento
+Sexo
+-Masculino
+-Femenino
+
+Procedencia
+-Carrera- seleccion
+-Bachillerato - Seleccion
+
