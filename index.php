@@ -14,9 +14,9 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-3 col-md-offset-4" >
-	        <div class="panel panel-default">
-            	<div class="panel-heading">Bienvenido al Sistema Tests!</div>
+        <div class="col-md-6 col-md-offset-3" >
+	        <div class="panel panel-primary">
+            	<div class="panel-heading text-center">Bienvenido al Sistema Tests!</div>
                 <div class="panel-body">
 	                <?php
 		                if (isset($_GET['error'])) {
@@ -37,12 +37,15 @@
 		                <input type="password" class="form-control" id="contrasena" name="pass">
 		              </div>
 		              <div class="form-group">
-		               <button class="btn btn-primary" type="submit" >Aceptar</button>
-		               <a href="registrar.php" class="btn btn-primary" >Registrar</a>
+                          <a href="registrar.php" class="btn btn-link col-md-6" >Registrar Nuevo</a>
+                          <button class="btn btn-primary col-md-6" type="submit" >Entrar</button>
 		              </div>
 		          </form>
+
 		        </div>
-		    </div>
+                <div class="panel-footer text-center">Datos de la Institucion <?php echo date("Y"); ?></div>
+
+            </div>
         </div>
       </div>
     </div>
