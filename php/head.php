@@ -31,13 +31,21 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/morris/raphael-min.js"></script>
   <script src="js/morris/morris.min.js"></script>
-  <!-- <script src="js/bootstrap-checkbox.min.js"></script> -->
+
+
+
+      <!-- <script src="js/bootstrap-checkbox.min.js"></script> -->
     <?php
       if ($titulo=="Test Aptitud" || $titulo=="Test Vocacional") {
     ?>  
         <link href="css/square/blue.css" rel="stylesheet">
-        <script src="js/icheck.js"></script>  
-    <?php
+<!--        <script src="js/icheck.js"></script>  -->
+
+<!--          Plugin labelauty-->
+        <script src="plugins/sticky/jquery.sticky-kit.min.js"></script>
+          <!--   <link rel="stylesheet" type="text/css" href="plugins/cluster/clusterize.css"/>-->
+          <!--          Plugin labelauty-->
+      <?php
       }
     ?>
   </head>

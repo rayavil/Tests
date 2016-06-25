@@ -29,17 +29,27 @@
 	require_once("php/nivel.php");
 ?>
 
+<script>
+
+
+</script>
+
 <div class="container">
+
 	<div class="row">
 		<div class="col-md-12 text-center">
         	<h3>Test Vocacional</h3>
         </div>
 	</div>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3>Test Vocacional</h3>
+        </div>
+    </div>
 	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-				<div class="panel panel-primary">
-					<div class="panel-heading"></div>
-					<div class="panel-body">
+		<div class="col-sm-8 col-sm-offset-2">
+            <div class="well well">
+
 						<form method="POST" action="php/enviarDatos.php" id="formVocacional">
 							<?php
 								echo "<div class='row text-left'>";
@@ -50,21 +60,25 @@
 
 								$i=1;
 								foreach ($testVocacional as $testVo) {
-                                    echo '<div class="well well">';
-									echo "<div class='row text-left'>";
-										echo "<div class='col-md-12'>";
-											echo "<label>$i".". ".$testVo['pregunta']."</label>";
-										echo "</div>";
+                                    echo '<div id="panel'.$i.'" class="panel panel-default">
+                                        <div class="panel-heading"><strong>'.$i.'.- '.$testVo['pregunta'].'</strong></div>
+                                        <div class="panel-body" id="intro">';
+
+									echo "<div class='row text-center '> <div class='btn-group col-xs-12' data-toggle='buttons'>";
+                                    $var_selec="panel".$i;
+
+										echo '<div class="col-xs-6 "  > <label  class="btn btn-warning ">';
+											echo "<input  type='radio' name='respuesta$i' id='respuesta$i' value='0' onchange='seleccionado(\"".$var_selec."\");' autocomplete='off'> <span class='glyphicon glyphicon-thumbs-down' aria-hidden='true'></span> No me interesa           ";
+										echo "</label></div>";
+
+                                        echo '<div class=" col-xs-6"  > <label class="btn btn-success ">';
+                                        echo "<input  type='radio' name='respuesta$i' id='respuesta$i' value='1' onchange='seleccionado(\"".$var_selec."\");' autocomplete='off'> <span class='glyphicon glyphicon-thumbs-up' aria-hidden='true'></span> Me interesa  ";
+                                        echo "</label></div>";
+
 									echo "</div>";
-									echo "<div class='row text-center'>";
-										echo "<div class='col-md-4 col-md-offset-2'>";
-											echo "<input type='radio' name='respuesta$i' id='respuesta$i' value='1'> Me interesa</input>";
-										echo "</div>";
-										echo "<div class='col-md-4'>";
-											echo "<input type='radio' name='respuesta$i' id='respuesta$i' value='0'> No me interesa</input>";
-										echo "</div>";
-									echo "</div>";
-									echo "</div>";
+                                    echo "</div>";
+                                    echo "</div>";
+                                    echo "</div>";
 									$i++;
 								}
 							?>
@@ -72,11 +86,37 @@
 						</form>
 					</div>
 				</div>
-		</div>
+
+        <div id="mensaje" class="col-sm-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">Instrucciones</div>
+                <div class="panel-body">
+            Aqui va un parrafo que nos sigue con instrucciones...
+                </div>
+            </div>
+            <div>
+
+            </div>
+
+        </div>
+
 	</div>
 </div>
 	<script>
-    	$(':checkbox').checkboxpicker();
+
+
+            /*$(':checkbox').checkboxpicker();*/
+
+            function seleccionado(algoselec){
+                $( "#"+algoselec ).removeClass( "panel-default" ).addClass( "panel-primary" );
+            }
+
+            $("#mensaje").stick_in_parent();
+
+
+
+
+
     </script>
     <script type="text/javascript" src="js/validarForm.js"></script>
     <script type="text/javascript" src="js/formatoForm.js"></script>
